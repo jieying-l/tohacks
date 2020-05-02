@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Map, InfoWindow, GoogleApiWrapper, Marker } from 'google-maps-react';
 import {
   Person,
 } from 'blockstack';
 
 const avatarFallbackImage = 'https://s3.amazonaws.com/onename/avatar-placeholder.png';
 
-export default class Profile extends Component {
+export class Profile extends Component {
   constructor(props) {
   	super(props);
 
@@ -40,6 +41,8 @@ export default class Profile extends Component {
             Logout
           </button>
         </p>
+        <Map google={this.props.google} zoom={14}>
+        </Map>
       </div> : null
     );
   }
@@ -50,4 +53,8 @@ export default class Profile extends Component {
       person: new Person(userSession.loadUserData().profile),
     });
   }
-}
+} 
+
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyCBSx2OWim81bEjserr-nkAhLJuHj18kjQ')
+})(Profile);

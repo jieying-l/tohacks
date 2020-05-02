@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Profile from './Profile.js';
 import Signin from './Signin.js';
-import { Map, InfoWindow, GoogleApiWrapper, Marker } from 'google-maps-react';
 import {
   UserSession,
   AppConfig
@@ -10,7 +9,7 @@ import {
 const appConfig = new AppConfig()
 const userSession = new UserSession({ appConfig: appConfig })
 
-export class App extends Component {
+export default class App extends Component {
 
 
   handleSignIn(e) {
@@ -32,8 +31,6 @@ export class App extends Component {
             : <Profile userSession={userSession} handleSignOut={ this.handleSignOut } />
           }
         </div>
-        <Map google={this.props.google} zoom={14}>
-        </Map>
       </div>
     );
   }
@@ -47,7 +44,3 @@ export class App extends Component {
     }
   }
 }
-
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyCBSx2OWim81bEjserr-nkAhLJuHj18kjQ')
-})(App)
