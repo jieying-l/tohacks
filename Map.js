@@ -43,8 +43,9 @@ export class MapContainer extends Component {
     }
 
     searchFunction() {
-        const userInput = document.getElementById("mySearch").value;
-        console.log(userInput)
+        this.userInput = document.getElementById("mySearch").value;
+        console.log(this.userInput)
+        this.stores = [{latitude: 43.4723, longitude: -80.5449}]
       }
     render() {
         return (
