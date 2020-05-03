@@ -9,7 +9,7 @@ h6{color:black;}
 .landing-heading{font-family:'Raleway', sans-serif;font-weight:400;}
 .logo{padding:20px;}
 div{font-family: 'Raleway', sans-serif;}
-.number{font-size:2rem; margin:0.15rem;color:black;}
+.number{font-size:7rem; margin:0.15rem;color:black; font-weight:800;}
 
 /* Buttons */
 .btn{font-family: 'Raleway', sans-serif;padding:0.5625rem 2.5rem;font-size:0.8125rem;font-weight:400;line-height:1.75rem;border-radius:3px;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
