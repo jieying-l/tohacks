@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 /* Globals */
 a,a:focus,a:hover{color:#fff;}
 html,body{height:100%;background-color:#F4F4FC;}
 body{color:#d63031;text-align:center;}
 h6{color:black;}
 .hide{display:none;}
-.landing-heading{font-family:'Calibri',sans-serif;font-weight:400;}
+.landing-heading{font-family:'Raleway', sans-serif;font-weight:400;}
 .logo{padding:20px;}
+div {
+    font-family: 'Raleway', sans-serif;
+  }
 
 /* Buttons */
-.btn{font-family:'Calibri',sans-serif;padding:0.5625rem 2.5rem;font-size:0.8125rem;font-weight:400;line-height:1.75rem;border-radius:3px;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.btn{font-family: 'Raleway', sans-serif;padding:0.5625rem 2.5rem;font-size:0.8125rem;font-weight:400;line-height:1.75rem;border-radius:3px;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 .btn-lg{font-size:0.875rem;padding:0.35rem 2.5rem;line-height:1.75rem;}
 .btn:focus,.btn:active:focus,.btn.active:focus{outline:none;}
 .btn-primary{background-color:#d63031;border:2px solid #b62020;}
@@ -26,7 +31,7 @@ h6{color:black;}
 .panel-authed{padding:0 0 0 0;}
 
 /* Home button */
-.btn-home-hello{position:absolute;font-family:'Source Code Pro',monospace;font-size:11px;font-weight:400;color:rgba(255,255,255,0.85);top:15px;left:15px;padding:3px 20px;background-color:rgba(255,255,255,0.15);border-radius:6px;-webkit-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.15);-moz-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.15);box-shadow:0px 0px 20px 0px rgba(0,0,0,0.15);}
+.btn-home-hello{position:absolute;font-family:'Raleway', sans-serif;font-size:11px;font-weight:400;color:rgba(255,255,255,0.85);top:15px;left:15px;padding:3px 20px;background-color:rgba(255,255,255,0.15);border-radius:6px;-webkit-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.15);-moz-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.15);box-shadow:0px 0px 20px 0px rgba(0,0,0,0.15);}
 
 /* Input */
 input, textarea{color:#000;}
