@@ -2,17 +2,29 @@ import React, { Component } from 'react';
 import { Map, InfoWindow, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const mapStyles = {
-    width: '100%',
-    height: '100%',
+    margin: '10%',
+    width: '80%',
+    height: '90%'
 };
 
 export class MapContainer extends Component {
     constructor(props) {
         super(props);
-    
+        this.onMarkerClick = this.onMarkerClick.bind(this);
         this.state = {
-            stores: [{latitude: 43.4723, longitude: -80.5449}]
-        }
+            showingInfoWindow: false,
+            activeMarker: {},
+            selectedPlace: {},
+            stores: [{latitude: 43.4723, longitude: -80.5449}],
+        };
+    }
+
+    onMarkerClick(props, marker, e) {
+        this.setState({
+            selectedPlace: props,
+            activeMarker: marker,
+            showingInfoWindow: true
+        });
     }
     
     displayMarkers = () => {
@@ -21,11 +33,15 @@ export class MapContainer extends Component {
            lat: store.latitude,
            lng: store.longitude,
          }}
-         onClick={() => console.log("You clicked me!")} />
+         onClick={this.onMarkerClick} />
         })
     }
 
     render() {
+        if (!this.props.google) {
+            return <div>Loading...</div>;
+        }
+
         return (
             <div>
                 <Map google={this.props.google}
@@ -34,12 +50,16 @@ export class MapContainer extends Component {
                     initialCenter={{ lat: 43.4723, lng: -80.5449}}
                 >
                     {this.displayMarkers()}
+                    <InfoWindow
+                        marker={this.state.activeMarker}
+                        visible={this.state.showingInfoWindow}
+                    >
+                        <div>
+                            <h1>{this.state.selectedPlace.name}</h1>
+                        </div>
+                    </InfoWindow>
                 </Map>
             </div>
         );
     }
 }
-
-export default GoogleApiWrapper({
-    apiKey: ('AIzaSyCBSx2OWim81bEjserr-nkAhLJuHj18kjQ')
-  })(MapContainer)
