@@ -7,6 +7,10 @@ const mapStyles = {
     height: '90%'
 };
 
+const textStyle = {
+    fontSize: 20
+}
+
 export class MapContainer extends Component {
     constructor(props) {
         super(props);
@@ -33,11 +37,12 @@ export class MapContainer extends Component {
            lat: store.latitude,
            lng: store.longitude,
          }}
-         onClick={this.onMarkerClick} />
+         onClick={this.onMarkerClick}
+         name={"Costco"} />
         })
     }
 
-    myFunction() {
+    searchFunction() {
         const userInput = document.getElementById("mySearch").value;
         console.log(userInput)
       }
@@ -46,7 +51,7 @@ export class MapContainer extends Component {
             <div>
                 <div>
                     <input name="mySearch" type='text' id="mySearch" placeholder='Search Places..'/>
-                    <button onclick="myFunction()">Search</button>
+                    <button onclick="searchFunction()">Search</button>
                     
                 </div>
                 <Map google={this.props.google}
@@ -60,7 +65,7 @@ export class MapContainer extends Component {
                         visible={this.state.showingInfoWindow}
                     >
                         <div>
-                            <h1>{this.state.selectedPlace.name}</h1>
+                            <h1 style={textStyle}>{this.state.selectedPlace.name}</h1>
                         </div>
                     </InfoWindow>
                 </Map>
