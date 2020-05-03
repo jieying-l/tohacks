@@ -29,12 +29,18 @@ export default class Profile extends Component {
         </div>
         <h2>Welcome to Q <span id="heading-name">{ person.name() ? person.name() : '!' }</span>!</h2>
         <h6>An online queue tracker for grocery stores to maintain social distancing.</h6>
+        <div>
+          <input name="mySearch" type='text' id="mySearch" placeholder='Search Places..'/>
+        </div>
+        <div>
+          <p></p>
+        </div>
         <p className="lead">
         <Link to='/Store'>
           <button
             className="btn btn-primary btn-lg"
           >
-            Stores
+            Search
           </button>
           </Link>
           <button
