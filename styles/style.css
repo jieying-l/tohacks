@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-/* Globals */
+/* General */
 a,a:focus,a:hover{color:#fff;}
 html,body{height:100%;background-color:#F4F4FC;}
 body{color:#d63031;text-align:center;}
@@ -8,13 +8,13 @@ h6{color:black;}
 .hide{display:none;}
 .landing-heading{font-family:'Raleway', sans-serif;font-weight:400;}
 .logo{padding:20px;}
-div {
-    font-family: 'Raleway', sans-serif;
-  }
+div{font-family: 'Raleway', sans-serif;}
+.number{font-size:2rem; margin:0.15rem;color:black;}
 
 /* Buttons */
 .btn{font-family: 'Raleway', sans-serif;padding:0.5625rem 2.5rem;font-size:0.8125rem;font-weight:400;line-height:1.75rem;border-radius:3px;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-ms-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
-.btn-lg{font-size:0.875rem;padding:0.35rem 2.5rem;line-height:1.75rem;}
+.btn-lg{font-size:0.875rem;padding:0.35rem 2.5rem;line-height:1.75rem;margin:0.15rem;}
+.btn-are{font-size:0.875rem;padding:0.35rem 2.25rem;margin:0.15rem;line-height:1.75rem;}
 .btn:focus,.btn:active:focus,.btn.active:focus{outline:none;}
 .btn-primary{background-color:#d63031;border:2px solid #b62020;}
 .btn-primary:hover,.btn-primary:focus,.btn-primary:active{color:#fff;border:2px solid #a12626; background-color:#a12626;}

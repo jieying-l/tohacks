@@ -49,26 +49,26 @@ export default class Queue extends Component {
     render () {
         return (
         <div>
+            
             <h1>Costco (42 Overlea Blvd, Toronto, ON M4H 1B6) Queue</h1>
-            <p>{this.state.quantity}</p>
-                <Link to='/Store'>
-            <button
-                className="btn btn-primary btn-lg"
-            >
-                Stores
-            </button>
-            </Link>
-            <button className="btn btn-primary btn-lg"
+            <p className="number">{this.state.quantity}</p>
+            <button className="btn btn-primary btn-are"
                     onClick={this.enqueue} //calls this.enqueue
             > 
-                Add to Queue
+                Join Queue
             </button>
-            <button className="btn btn-primary btn-lg"
+            <button className="btn btn-primary btn-are"
                     onClick={this.dequeue} //calls this.dequeue
             >
                 Leave Queue
             </button>
-            
+            <Link to='/Store'>
+            <button
+                className="btn btn-primary btn-lg"
+            >
+                Back
+            </button>
+            </Link>
         </div>
         );
     }
