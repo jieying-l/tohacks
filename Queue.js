@@ -50,7 +50,17 @@ export default class Queue extends Component {
     render () {
         return (
         <div>
-            
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <div className="avatar-section">
+            <img src="q.svg" className="img-rounded avatar" id="avatar-image" alt=""/>
+            </div>
             <h1>Costco (42 Overlea Blvd, Toronto, ON M4H 1B6) Queue</h1>
             <h4>Current Capacity       |       Current Queue</h4>
             <p className="number">{this.state.capacity} | {this.state.quantity}</p>
@@ -71,6 +81,14 @@ export default class Queue extends Component {
                 Back
             </button>
             </Link>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
+            <h3>.</h3>
         </div>
         );
     }

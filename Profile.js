@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MapContainer from './Map.js'
 import {Link} from 'react-router-dom';
 import {
   Person,
@@ -51,9 +50,6 @@ export default class Profile extends Component {
             Logout
           </button>
         </p>
-        <div>
-          <MapContainer />
-        </div>
       </div> : null
     );
   }
