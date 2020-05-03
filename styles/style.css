@@ -16,7 +16,7 @@ body{color:#d63031;text-align:center;}
 
 /* Avatar */
 .avatar{width:100px;height:100px;}
-.avatar-section{margin-bottom:25px;}
+.avatar-section{margin-bottom:5px;}
 
 /* Scaffolding */
 .site-wrapper{display:table;width:100%;height:90% !important;min-height:90vh !important;}
