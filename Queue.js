@@ -52,7 +52,8 @@ export default class Queue extends Component {
         <div>
             
             <h1>Costco (42 Overlea Blvd, Toronto, ON M4H 1B6) Queue</h1>
-            <p className="number">{this.state.quantity}</p>
+            <h4>Current Capacity       |       Current Queue</h4>
+            <p className="number">{this.state.capacity} | {this.state.quantity}</p>
             <button className="btn btn-primary btn-are"
                     onClick={this.enqueue} //calls this.enqueue
             > 
@@ -70,8 +71,6 @@ export default class Queue extends Component {
                 Back
             </button>
             </Link>
-            <h1>Current Capacity</h1>
-            <p className="number">{this.state.capacity}</p>
         </div>
         );
     }
