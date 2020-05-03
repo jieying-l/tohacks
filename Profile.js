@@ -28,6 +28,7 @@ export default class Profile extends Component {
           <img src="q.svg" className="img-rounded avatar" id="avatar-image" alt=""/>
         </div>
         <h2>Welcome to Q <span id="heading-name">{ person.name() ? person.name() : '!' }</span>!</h2>
+        <h6>An online queue tracker for grocery stores to maintain social distancing.</h6>
         <p className="lead">
         <Link to='/Store'>
           <button
