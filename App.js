@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Profile from './Profile.js';
 import Signin from './Signin.js';
+import Store from './Store.js';
 import {
   UserSession,
   AppConfig
 } from 'blockstack';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const appConfig = new AppConfig()
 const userSession = new UserSession({ appConfig: appConfig })
@@ -23,15 +25,20 @@ export default class App extends Component {
   }
 
   render() {
-    return (
+    return (    
+      <BrowserRouter>
       <div className="site-wrapper">
         <div className="site-wrapper-inner">
+        <Switch>
+             <Route path="/Store" exact component={Store}/>
+           </Switch>
           { !userSession.isUserSignedIn() ?
             <Signin userSession={userSession} handleSignIn={ this.handleSignIn } />
             : <Profile userSession={userSession} handleSignOut={ this.handleSignOut } />
           }
         </div>
       </div>
+      </BrowserRouter>
     );
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MapContainer from './Map.js'
+import {Link} from 'react-router-dom';
 import {
   Person,
 } from 'blockstack';
@@ -40,6 +41,13 @@ export default class Profile extends Component {
           >
             Logout
           </button>
+          <Link to='/Store'>
+          <button
+            className="btn btn-primary btn-lg"
+          >
+            Stores
+          </button>
+          </Link>
         </p>
         <div>
           <MapContainer />
