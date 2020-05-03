@@ -14,6 +14,7 @@ export default class Queue extends Component {
         this.enqueue = this.enqueue.bind(this);
         this.dequeue = this.dequeue.bind(this);
         this.state = { quantity: 1,
+                        capacity: 200,
                         leftqueue: false, 
                         joinedqueue: false};
     }
@@ -69,6 +70,8 @@ export default class Queue extends Component {
                 Back
             </button>
             </Link>
+            <h1>Current Capacity</h1>
+            <p className="number">{this.state.capacity}</p>
         </div>
         );
     }
