@@ -19,7 +19,7 @@ export class MapContainer extends Component {
             showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {},
-            stores: [{latitude: 43.4723, longitude: -80.5449}],
+            stores: [{latitude: 43.707219, longitude: -79.348359}],
             userInput: '',
         };
     }
@@ -46,16 +46,12 @@ export class MapContainer extends Component {
     searchFunction() {
         this.userInput = document.getElementById("mySearch").value;
         console.log(this.userInput)
-        this.stores = [{latitude: 43.4723, longitude: -80.5449}]
+        this.stores = [{latitude: 43.707219, longitude: -79.348359}]
       }
     render() {
         return (
             <div>
-                <div>
-                    <input name="mySearch" type='text' id="mySearch" placeholder='Search Places..'/>
-                    <button onclick="searchFunction()">Search</button>
-                    
-                </div>
+                
                 <Map google={this.props.google}
                     zoom={8}
                     style={mapStyles}
@@ -80,3 +76,10 @@ export default GoogleApiWrapper({
     apiKey: ('AIzaSyCBSx2OWim81bEjserr-nkAhLJuHj18kjQ')
   })(MapContainer)
 
+  /*
+  <div>
+                    <input name="mySearch" type='text' id="mySearch" placeholder='Search Places..'/>
+                    <button onclick="searchFunction()">Search</button>
+                    
+                </div>
+                */
