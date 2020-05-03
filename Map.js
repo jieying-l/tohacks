@@ -20,6 +20,7 @@ export class MapContainer extends Component {
             activeMarker: {},
             selectedPlace: {},
             stores: [{latitude: 43.4723, longitude: -80.5449}],
+            userInput: '',
         };
     }
 
