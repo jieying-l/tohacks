@@ -20,6 +20,7 @@ export default class Queue extends Component {
     
     enqueue(props, state) { //increments queue number
         if (this.state.leftqueue == true) {
+            window.alert("You have already joined the queue");
             return; //if the person has already left the queue, display a message indicating an error (display message leftAlready)
         } else {
             this.setState((state) => {
@@ -33,6 +34,7 @@ export default class Queue extends Component {
 
     dequeue(props, state) { //increments queue number
         if (this.state.joinedqueue == true) {
+            window.alert("You have already left the queue");
             return; //if the person has already joined the queue, display a message indicating an error (display message joinedAlready)
         } else {
             this.setState((state) => {
@@ -47,7 +49,7 @@ export default class Queue extends Component {
     render () {
         return (
         <div>
-            <h1>Costco Queue</h1>
+            <h1>Costco (42 Overlea Blvd, Toronto, ON M4H 1B6) Queue</h1>
             <p>{this.state.quantity}</p>
                 <Link to='/Store'>
             <button
