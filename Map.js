@@ -37,13 +37,18 @@ export class MapContainer extends Component {
         })
     }
 
+    myFunction() {
+        const userInput = document.getElementById("mySearch").value;
+        console.log(userInput)
+      }
     render() {
-        if (!this.props.google) {
-            return <div>Loading...</div>;
-        }
-
         return (
             <div>
+                <div>
+                    <input name="mySearch" type='text' id="mySearch" placeholder='Search Places..'/>
+                    <button onclick="myFunction()">Search</button>
+                    
+                </div>
                 <Map google={this.props.google}
                     zoom={8}
                     style={mapStyles}
@@ -67,3 +72,4 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
     apiKey: ('AIzaSyCBSx2OWim81bEjserr-nkAhLJuHj18kjQ')
   })(MapContainer)
+
