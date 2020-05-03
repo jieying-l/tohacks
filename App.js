@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Profile from './Profile.js';
 import Signin from './Signin.js';
 import Store from './Store.js';
+import Queue from './Queue.js';
 import {
   UserSession,
   AppConfig
@@ -31,6 +32,7 @@ export default class App extends Component {
         <div className="site-wrapper-inner">
         <Switch>
              <Route path="/Store" exact component={Store}/>
+             <Route path="/Store/Queue" exact component={Queue}/>
            </Switch>
           { !userSession.isUserSignedIn() ?
             <Signin userSession={userSession} handleSignIn={ this.handleSignIn } />
